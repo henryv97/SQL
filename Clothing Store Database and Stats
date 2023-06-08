@@ -18,5 +18,6 @@ INSERT INTO store VALUES (15, 'Adidas', 'black shorts', 5, '300');
 
 SELECT* FROM store;
 
+--display the database ordered by price.
 SELECT* FROM store
 ORDER BY price
