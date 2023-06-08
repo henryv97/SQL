@@ -1,0 +1,22 @@
+CREATE TABLE store (id integer primary key, name text, color text, rating integer, price text);
+
+INSERT INTO store VALUES (1,'Gucci', 'blue T shirts', 4, '350');
+INSERT INTO store VALUES (2,'Hollister', 'red pants', 7, '400');
+INSERT INTO store VALUES (3, 'Louis vuitton', 'blue shorts', 4, '400');
+INSERT INTO store VALUES (4, 'Gap', 'black t shirts', 4, '400');
+INSERT INTO store VALUES (5, 'Nike', 'White t shirts', 4, '250');
+INSERT INTO store VALUES (6, 'Hollister', 'red t shirts', 4, '250');
+INSERT INTO store VALUES (7, 'Gucci', 'blue t shirts', 4, '800');
+INSERT INTO store VALUES (8, 'Gucci', 'red shorts', 4, '950');
+INSERT INTO store VALUES (9, 'Nike', 'white pants', 4, '350');
+INSERT INTO store VALUES (10, 'Gucci', 'blue t shirts', 4, '900');
+INSERT INTO store VALUES (11, 'Armani', 'red t shirts', 5, '650');
+INSERT INTO store VALUES (12, 'Adidas', 'red sneakers', 5, '450');
+INSERT INTO store VALUES (13,'Armani', 'black shorts', 4, '200');
+INSERT INTO store VALUES (14, 'Adidas', 'pink t shirts', 5, '300');
+INSERT INTO store VALUES (15, 'Adidas', 'black shorts', 5, '300');
+
+SELECT* FROM store;
+
+SELECT* FROM store
+ORDER BY price
