@@ -1,0 +1,47 @@
+/**In this project, you’re going to make your own table with some small 
+set of “famous people”, then make more tables about things they do and join 
+those to create nice human readable lists. Contains at least two tables with at 
+least 15 rows total. One of the tables contains a column that relates to the primary key of another table.
+Has at least one query that does a JOIN.*/
+
+CREATE TABLE baseball_stars (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fullname TEXT,
+    age INTEGER,
+    nationality TEXT);
+
+INSERT INTO baseball_stars (fullname, age, nationality) VALUES ('Fernando Tatis Jr', '24', 'Dominican Republic');
+INSERT INTO baseball_stars (fullname, age, nationality) VALUES ('Shohei Ohtani', '29', 'Japan');
+INSERT INTO baseball_stars (fullname, age, nationality) VALUES ('Juan Soto', '25', 'Dominican Republic');
+INSERT INTO baseball_stars (fullname, age, nationality) VALUES ('Aaron Judge', '31', 'USA');
+INSERT INTO baseball_stars (fullname, age, nationality) VALUES ('Manny Machado','31', 'USA');
+INSERT INTO baseball_stars (fullname, age, nationality) VALUES ('Mookie Betts','30', 'USA');
+INSERT INTO baseball_stars (fullname, age, nationality) VALUES ('Sandy Alcantara', '27','Dominican Republic');
+INSERT INTO baseball_stars (fullname, age, nationality) VALUES ('Vladimir Guerrero Jr', '24','Dominican Republic');
+
+CREATE TABLE players_contract (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    players_id TEXT,
+    contract_length INTEGER,
+   salary TEXT);
+    
+ INSERT INTO players_contract (players_id, contract_length,salary) VALUES ('1', '14 years', '24 million');
+ INSERT INTO players_contract (players_id,contract_length, salary) VALUES ('2', '1 year', '30 million');
+INSERT INTO players_contract (players_id,contract_length, salary) VALUES ('3', '1 year', '23 million') ;
+INSERT INTO players_contract (players_id,contract_length, salary) VALUES ('4', '9 years', '40 million');
+INSERT INTO players_contract (players_id, contract_length, salary) VALUES ('5', '11 years', '13 million');
+INSERT INTO players_contract (players_id, contract_length, salary) VALUES ('6','12 years', '27 million');
+INSERT INTO players_contract (players_id, contract_length, salary) VALUES ('7', '5 years', '11.2 million');
+INSERT INTO players_contract (players_id, contract_length, salary) VALUES ('8', '1 year', '14.5 million');
+
+/*Return total players contract length*/
+
+SELECT baseball_stars.fullname,players_contract.contract_length 
+    FROM baseball_stars 
+    JOIN players_contract 
+    ON baseball_stars.id=players_contract.id;
+    
+
+  
+       
+
