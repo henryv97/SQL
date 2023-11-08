@@ -1,0 +1,34 @@
+SELECT *
+FROM fortune_companies
+
+# Which companies have healthcare benefits *and* at least 20 paid time off days?
+
+SELECT healthcare_benefits, paid_time_off_days
+FROM fortune_companies
+WHERE healthcare_benefits >= 1
+AND paid_time_off_days >= 20 ;
+
+# Which company in the Retail industry has the least revenue, and what's their revenue? 
+
+SELECT company_name, min(revenue)
+FROM fortune_companies
+WHERE industry = 'Retail' ;
+
+# Which industries have an average revenue of at least $200 Billion, and what are their avg revenues?
+
+SELECT industry, ROUND(AVG(revenue),1) AS avg_revenue_billions
+FROM fortune_companies
+GROUP BY industry
+HAVING avg_revenue_billions >= 200 ;
+
+# What is the average employee tenure ?
+
+SELECT AVG (avg_employee_tenure)
+FROM fortune_companies
+WHERE employees ;
+
+# What are the companies names of the companies in the Technologie industry ?
+
+SELECT company_name,industry
+FROM fortune_companies
+WHERE industry = 'Technology' ;
