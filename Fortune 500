@@ -85,7 +85,7 @@ SELECT AVG (avg_employee_tenure)
 FROM fortune_companies
 WHERE employees ;
 
-# What are the companies names in the companies in the Technologie industry ?
+# What are the companie's names in the Technologie industry ?
 
 SELECT company_name,industry
 FROM fortune_companies
